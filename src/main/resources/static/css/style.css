@@ -1,0 +1,32 @@
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+    background: linear-gradient(120deg, #667eea 0%, #764ba2 100%);
+}
+
+.welcome-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-auth {
+    padding: 1rem;
+}
+
+.form-auth .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-auth input {
+    margin-bottom: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
