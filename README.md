@@ -43,7 +43,7 @@ Spring Boot 기반의 세션 인증 회원 관리 시스템입니다.
 
 #### 4️⃣ 예외 처리 체계
 
-- **계층적 예외 구조**: ValidationException을 상속한 7개의 구체적 예외
+- **계층적 예외 구조**: ValidationException을 상속한 8개의 구체적 예외
   ```
   ValidationException (부모)
   ├─ InvalidUserIdException
@@ -52,7 +52,8 @@ Spring Boot 기반의 세션 인증 회원 관리 시스템입니다.
   ├─ InvalidUserNameException
   ├─ InvalidPhoneNumberException
   ├─ DuplicateUserIdException
-  └─ MissingFieldException
+  ├─ MissingFieldException
+  └─ UnauthorizedException
   ```
 - **명확한 에러 메시지**: 각 예외마다 사용자 친화적인 메시지
 - **타입 안전성**: 예외 타입으로 오류 구분
