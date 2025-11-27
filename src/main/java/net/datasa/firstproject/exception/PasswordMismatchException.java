@@ -9,8 +9,4 @@ public class PasswordMismatchException extends ValidationException {
     public PasswordMismatchException() {
         super("비밀번호가 일치하지 않습니다.");
     }
-
-    public PasswordMismatchException(String message) {
-        super(message);
-    }
 }

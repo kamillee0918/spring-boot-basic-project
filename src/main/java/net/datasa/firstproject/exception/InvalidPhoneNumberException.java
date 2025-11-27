@@ -10,8 +10,4 @@ public class InvalidPhoneNumberException extends ValidationException {
     public InvalidPhoneNumberException() {
         super("휴대전화번호는 10~11자, 숫자만 가능합니다.");
     }
-
-    public InvalidPhoneNumberException(String message) {
-        super(message);
-    }
 }

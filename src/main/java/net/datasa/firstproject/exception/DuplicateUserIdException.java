@@ -9,8 +9,4 @@ public class DuplicateUserIdException extends ValidationException {
     public DuplicateUserIdException() {
         super("이미 사용 중인 아이디입니다.");
     }
-
-    public DuplicateUserIdException(String message) {
-        super(message);
-    }
 }

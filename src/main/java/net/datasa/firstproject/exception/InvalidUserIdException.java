@@ -10,8 +10,4 @@ public class InvalidUserIdException extends ValidationException {
     public InvalidUserIdException() {
         super("아이디는 3~14자, 영문/숫자/특수문자만 가능합니다.");
     }
-
-    public InvalidUserIdException(String message) {
-        super(message);
-    }
 }

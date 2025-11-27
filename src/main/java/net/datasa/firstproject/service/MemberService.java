@@ -207,4 +207,17 @@ public class MemberService {
     private boolean isNullOrEmpty(String str) {
         return str == null || str.trim().isEmpty();
     }
+
+    /**
+     * 보호된 리소스 접근 검증 메서드
+     * - 세션에 userId가 없으면 예외를 발생시킵니다.
+     *
+     * @param userId 세션에 저장된 사용자 아이디
+     * @throws UnauthorizedException 로그인 정보가 없을 시
+     */
+    public void validateAccess(Object userId) {
+        if (userId == null) {
+            throw new UnauthorizedException();
+        }
+    }
 }

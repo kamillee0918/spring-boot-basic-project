@@ -10,8 +10,4 @@ public class InvalidUserNameException extends ValidationException {
     public InvalidUserNameException() {
         super("이름은 2~20자, 한글만 가능합니다.");
     }
-
-    public InvalidUserNameException(String message) {
-        super(message);
-    }
 }

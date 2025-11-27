@@ -59,11 +59,11 @@ Spring Boot 기반의 세션 인증 회원 관리 시스템입니다.
 
 #### 5️⃣ 테스트 커버리지
 
-- **총 26개 테스트 (100% 통과 ✅)**
-    - MemberServiceTest: 19개 (비즈니스 로직 검증)
+- **총 32개 테스트 (100% 통과 ✅)**
+    - MemberServiceTest: 25개 (비즈니스 로직 검증)
     - MemberControllerTest: 7개 (웹 계층 검증)
 - **높은 커버리지**
-    - MemberService: 76% Line, 77% Branch
+    - MemberService: 83% Line, 86% Branch
     - MemberController: 73% Line
 - **Mock 기반 테스트**: Mockito를 활용한 독립적 단위 테스트
 
