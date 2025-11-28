@@ -60,7 +60,7 @@ class MemberServiceTest {
 
         assertThatThrownBy(() -> memberService.saveUser(dto))
                 .isInstanceOf(MissingFieldException.class)
-                .hasMessageContaining("아이디을(를) 입력해 주세요");
+                .hasMessageContaining("아이디를 입력해 주세요");
     }
 
     @Order(3)
@@ -71,7 +71,7 @@ class MemberServiceTest {
 
         assertThatThrownBy(() -> memberService.saveUser(dto))
                 .isInstanceOf(MissingFieldException.class)
-                .hasMessageContaining("이름을(를) 입력해 주세요");
+                .hasMessageContaining("이름을 입력해 주세요");
     }
 
     @Order(4)
@@ -82,7 +82,7 @@ class MemberServiceTest {
 
         assertThatThrownBy(() -> memberService.saveUser(dto))
                 .isInstanceOf(MissingFieldException.class)
-                .hasMessageContaining("비밀번호을(를) 입력해 주세요");
+                .hasMessageContaining("비밀번호를 입력해 주세요");
     }
 
     @Order(5)
@@ -93,7 +93,7 @@ class MemberServiceTest {
 
         assertThatThrownBy(() -> memberService.saveUser(dto))
                 .isInstanceOf(MissingFieldException.class)
-                .hasMessageContaining("비밀번호 확인을(를) 입력해 주세요");
+                .hasMessageContaining("비밀번호 확인을 입력해 주세요");
     }
 
     @Order(6)
@@ -104,7 +104,7 @@ class MemberServiceTest {
 
         assertThatThrownBy(() -> memberService.saveUser(dto))
                 .isInstanceOf(MissingFieldException.class)
-                .hasMessageContaining("휴대전화번호을(를) 입력해 주세요");
+                .hasMessageContaining("휴대전화번호를 입력해 주세요");
     }
 
     // ===== 유효성 검증 테스트 (정규식) =====

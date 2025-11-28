@@ -7,7 +7,7 @@ package net.datasa.firstproject.exception;
 public class MissingFieldException extends ValidationException {
 
     public MissingFieldException(String fieldName) {
-        super(fieldName + "을(를) 입력해 주세요.");
+        super(fieldName + " 입력해 주세요.");
     }
 
     public MissingFieldException(String message, boolean isCustomMessage) {

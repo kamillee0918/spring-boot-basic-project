@@ -45,10 +45,10 @@ public class MemberService {
     public List<MemberDTO> findAllUser() {
         log.debug("[UserService.findAllUser] 호출 완료.");
 
-        // 1. DTO를 담을 ArrayList 생성
+        // 1) DTO를 담을 ArrayList 생성
         List<MemberDTO> dtoList = new ArrayList<>();
 
-        // 2&3. 반복문으로 DTO 객체 생성해서 entity 값을 저장 및 ArrayList에 추가
+        // 2&3) 반복문으로 DTO 객체 생성해서 entity 값을 저장 및 ArrayList에 추가
         for (MemberEntity entity : memberRepository.findAll()) {
             MemberDTO dto = new MemberDTO();
             dto.setUserId(entity.getUserId());
@@ -59,7 +59,7 @@ public class MemberService {
             dtoList.add(dto);
         }
 
-        // 4. ArrayList를 반환
+        // 4) ArrayList를 반환
         return dtoList;
     }
 
@@ -81,19 +81,19 @@ public class MemberService {
 
         // 2) 필수 필드 null/공백 체크
         if (isNullOrEmpty(dto.getUserId())) {
-            throw new MissingFieldException("아이디");
+            throw new MissingFieldException("아이디를");
         }
         if (isNullOrEmpty(dto.getPassword())) {
-            throw new MissingFieldException("비밀번호");
+            throw new MissingFieldException("비밀번호를");
         }
         if (isNullOrEmpty(dto.getConfirmPassword())) {
-            throw new MissingFieldException("비밀번호 확인");
+            throw new MissingFieldException("비밀번호 확인을");
         }
         if (isNullOrEmpty(dto.getUserName())) {
-            throw new MissingFieldException("이름");
+            throw new MissingFieldException("이름을");
         }
         if (isNullOrEmpty(dto.getPhoneNumber())) {
-            throw new MissingFieldException("휴대전화번호");
+            throw new MissingFieldException("휴대전화번호를");
         }
 
         // 3) 정규식 검증
@@ -189,7 +189,7 @@ public class MemberService {
      * @param phoneNumber 숫자만 포함된 전화번호 (10~11자리)
      * @return 포맷팅된 전화번호
      */
-    private String formatPhoneNumber(String phoneNumber) {
+    protected String formatPhoneNumber(String phoneNumber) {
         if (phoneNumber.length() == 10) {
             // 예: 0101234567 -> 010-123-4567
             return phoneNumber.substring(0, 3) + "-" + phoneNumber.substring(3, 6) + "-" + phoneNumber.substring(6);

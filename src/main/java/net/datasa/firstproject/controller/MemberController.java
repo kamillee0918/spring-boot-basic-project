@@ -48,7 +48,7 @@ public class MemberController {
      *
      * @param dto   회원가입 폼 데이터 DTO
      * @param model 에러 메시지 전달을 위한 Model
-     * @return 루트로 리디렉션 또는 회원가입 폼
+     * @return 루트로 리디렉션 또는 회원가입 템플릿 경로(view/member/register)
      */
     @PostMapping("/register")
     public String register(@ModelAttribute MemberDTO dto, Model model) {
@@ -90,7 +90,7 @@ public class MemberController {
      * @param userId   사용자 아이디(폼 입력)
      * @param password 사용자 비밀번호(폼 입력)
      * @param model    에러 메시지 전달을 위한 Model
-     * @return 리디렉션 경로 또는 로그인 폼
+     * @return 리디렉션 경로 또는 로그인 템플릿 경로(view/member/login)
      */
     @PostMapping("/login")
     public String login(
@@ -153,13 +153,13 @@ public class MemberController {
     }
 
     /**
-     * 보호 리소스 접근 테스트 메서드
+     * 보호 리소스 접근 테스트 라우팅 메서드
      * - 세션에 저장된 사용자 아이디(userId)가 존재하지 않으면 로그인 페이지로 리디렉션하여 비로그인 사용자의 접근을 차단합니다.
      * - 세션이 존재하면 사용자 목록을 조회하여 사용자 목록 템플릿을 반환합니다.
      *
      * @param model   뷰 템플릿으로 데이터 전달을 위한 Model
      * @param session 현재 사용자 세션
-     * @return 로그인 페이지로 리디렉션 또는 사용자 목록 템플릿
+     * @return 로그인 페이지로 리디렉션 또는 사용자 목록 템플릿 경로(view/member/user-list)
      */
     @GetMapping("/test")
     public String test(

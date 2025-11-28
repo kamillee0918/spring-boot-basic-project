@@ -16,7 +16,7 @@ public class MainController {
      *
      * @param model   뷰 템플릿으로 데이터 전달을 위한 Model 객체
      * @param session 현재 사용자의 HttpSession (로그인 사용자 식별용 userId를 저장/조회)
-     * @return index 템플릿 이름
+     * @return index 템플릿 경로(index)
      */
     @GetMapping({"", "/"})
     public String index(
